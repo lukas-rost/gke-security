@@ -256,6 +256,7 @@
 ## <span style="color:red">Insider Threats and Misuse</span>
 - <span style="color:red">Lack of controls or detection capabilities for malicious insiders or compromised credentials.</span>
 
+---
 
 # <span style="color:red">Post-Exploitation and Lateral Movement</span>
 
