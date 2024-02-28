@@ -3,6 +3,22 @@
 
 ---
 
+# <span style="color:red"> Misplaced Trust in External Dependencies </span>
+
+------
+
+## <span style="color:red">Overreliance on Third-Party Tools</span>
+- <span style="color:red">Trusting blindly in security tools without understanding their limitations or misconfigurations.</span>
+- <span style="color:red">Risk of using outdated or unsupported third-party tools and plugins within the GKE environment.</span>
+
+------
+
+## <span style="color:red">Supply Chain Attacks</span>
+- <span style="color:red">Insufficient vetting of third-party images, libraries, and dependencies can lead to compromised containers.</span>
+- <span style="color:red">Lack of continuous monitoring and updating for vulnerabilities in external dependencies.</span>
+
+---
+
 # Introduction to Container Security
 
 ------
@@ -23,9 +39,21 @@
 - Embed security testing tools directly into developer environments.
 - Implement pre-commit hooks and automated security gates in CI/CD workflows.
 
+------
+
+## <span style="color:red">Assumption of Secure Defaults</span>
+- <span style="color:red">Misconception that default configurations are secure-by-design.</span>
+- <span style="color:red">Overlooking default network exposures or permissions that can be exploited.</span>
+
 ---
 
 # Understanding GKE
+
+------
+
+## <span style="color:red">GKE Misconfigurations</span>
+- <span style="color:red">Underestimating the complexity of Kubernetes, leading to poorly configured clusters.<span>
+- <span style="color:red">Ignoring or misunderstanding GKE audit logs, which can contain indicators of compromise.<span>
 
 ------
 
@@ -48,6 +76,11 @@
 ---
 
 # Container Security Best Practices
+
+------
+
+## <span style="color:red">Static Environment Assumption</span>
+- <span style="color:red">Assuming the environment remains static, neglecting the need for adaptive security measures against evolving threats.</span>
 
 ------
 
@@ -83,6 +116,12 @@
 
 ------
 
+## <span style="color:red">Ineffective Policy Enforcement</span>
+- <span style="color:red">Inadequate testing and enforcement of security contexts and pod security policies.</span>
+- <span style="color:red">Relying solely on policies without understanding their practical effectiveness in blocking attacks.</span>
+
+------
+
 ## Implementing Strict Pod Security Standards
 - Apply strict Pod Security Standards or Policies to minimize risks.
 - Regularly audit and enforce these policies using tools like Kubebench or Kubeaudit.
@@ -96,6 +135,12 @@
 ---
 
 # Network Security in GKE
+
+------
+
+## <span style="color:red">Network Policy Bypass</span>
+- <span style="color:red">Techniques that could be used to bypass network policies, such as DNS tunneling or side-channel attacks.</span>
+- <span style="color:red">Overlooking the potential for internal threats and lateral movement within the cluster network.</span>
 
 ------
 
@@ -115,6 +160,12 @@
 
 ------
 
+## <span style="color:red">Log Manipulation and Evasion</span>
+- <span style="color:red">Potential for attackers to tamper with or evade logging mechanisms to avoid detection.</span>
+- <span style="color:red">Failure to secure and validate logging integrity and origin.</span>
+
+------
+
 ## Forensic Readiness and Incident Response
 - Prepare for incident response with forensic analysis tools and capabilities.
 - Implement immutable logging and backup strategies to preserve evidence.
@@ -128,6 +179,12 @@
 ---
 
 # Compliance and Governance in Kubernetes
+
+------
+
+## <span style="color:red">Compliance as a Checkbox Activity</span>
+- <span style="color:red">Treating compliance as a one-time activity rather than an ongoing process.</span>
+- <span style="color:red">Misinterpreting compliance with security, leading to gaps in actual security posture.</span>
 
 ------
 
@@ -147,6 +204,12 @@
 
 ------
 
+## <span style="color:red">False Sense of Security in Automation</span>
+- <span style="color:red">Overreliance on automated tools and pipelines can lead to overlooked manual security checks and balances.</span>
+- <span style="color:red">Neglecting advanced attack techniques that can bypass automated security measures.</span>
+
+------
+
 ## Security Champions and Training Programs
 - Establish a Security Champions program within development teams.
 - Provide ongoing security training and awareness programs for all personnel.
@@ -163,6 +226,12 @@
 
 ------
 
+## <span style="color:red">Infrastructure as Code Exploits</span>
+- <span style="color:red">Potential for exploitation of Terraform scripts, such as hardcoded secrets or misconfigurations.</span>
+- <span style="color:red">Risks associated with state files and their management, leading to possible state poisoning or leakage.</span>
+
+------
+
 ## IaC Security Best Practices
 - Implement pre-deployment IaC scanning with tools like Checkov, Terrascan, or Bridgecrew.
 - Enforce IaC policies to ensure secure and compliant infrastructure provisioning.
@@ -172,4 +241,31 @@
 ## Continuous Infrastructure Compliance
 - Integrate continuous compliance monitoring into IaC workflows.
 - Utilize Terraform state lock and historical state analysis for change tracking and auditing.
+
+---
+
+# <span style="color:red">Social Engineering and Insider Threats
+
+------
+
+## <span style="color:red">Social Engineering Tactics</span>
+- <span style="color:red">Underestimating the risk of social engineering as a vector to gain access or escalate privileges within the GKE environment.</span>
+
+------
+
+## <span style="color:red">Insider Threats and Misuse</span>
+- <span style="color:red">Lack of controls or detection capabilities for malicious insiders or compromised credentials.</span>
+
+
+# <span style="color:red">Post-Exploitation and Lateral Movement</span>
+
+------
+
+## <span style="color:red">Post-Exploitation Techniques</span>
+- <span style="color:red">Failure to consider or detect post-exploitation activities, such as token theft, privilege escalation, or data exfiltration within the GKE cluster.
+
+------
+
+## <span style="color:red">Lateral Movement Detection</span>
+- <span style="color:red">Insufficient measures to detect and prevent lateral movement between containers, pods, and nodes.</span>
 
