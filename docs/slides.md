@@ -10,7 +10,8 @@
 ## Evolution from Traditional Virtualization
 - Containers vs. Virtual Machines: Isolation, Resource Efficiency, and Scalability.
 - Evolutionary Impact on DevOps: Speed, Scalability, and Consistency.
-
+- <span style="color:blue">Implement kernel hardening with tools like AppArmor, SELinux, or seccomp.</span>
+- <span style="color:blue">Use gVisor or Kata Containers for sandboxed container execution.</span>
 ------
 
 ## Core Security Threats
